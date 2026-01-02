@@ -6,10 +6,12 @@ import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import ProjectDetail from './components/ProjectDetail';
+import CV from './components/CV';
 import { Project } from './types';
 
 const App: React.FC = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [showCV, setShowCV] = useState<boolean>(false);
 
   const handleContactClick = () => {
     const contactSection = document.getElementById('contact');
@@ -18,12 +20,27 @@ const App: React.FC = () => {
     }
   };
 
+  const handleViewCV = () => {
+    setShowCV(true);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleBackFromCV = () => {
+    setShowCV(false);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  // If CV page is shown, render only CV component
+  if (showCV) {
+    return <CV onBack={handleBackFromCV} />;
+  }
+
   return (
     <div className="min-h-screen bg-slate-950 text-white font-sans selection:bg-orange-500 selection:text-white">
       <Navbar onContactClick={handleContactClick} />
-      
+
       <main>
-        <Hero onContactClick={handleContactClick} />
+        <Hero onContactClick={handleContactClick} onViewCV={handleViewCV} />
         <Skills />
         <Experience />
         <Projects onProjectClick={setSelectedProject} />
@@ -37,9 +54,9 @@ const App: React.FC = () => {
 
       {/* Project Detail Overlay Modal */}
       {selectedProject && (
-        <ProjectDetail 
-          project={selectedProject} 
-          onClose={() => setSelectedProject(null)} 
+        <ProjectDetail
+          project={selectedProject}
+          onClose={() => setSelectedProject(null)}
         />
       )}
     </div>

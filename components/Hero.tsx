@@ -1,12 +1,13 @@
 import React from 'react';
-import { Download, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { FileText, ArrowRight, CheckCircle2 } from 'lucide-react';
 import { HERO_DATA, MARQUEE_SKILLS } from '../constants';
 
 interface HeroProps {
   onContactClick: () => void;
+  onViewCV: () => void;
 }
 
-const Hero: React.FC<HeroProps> = ({ onContactClick }) => {
+const Hero: React.FC<HeroProps> = ({ onContactClick, onViewCV }) => {
   return (
     <section id="about" className="relative pt-32 pb-10 min-h-screen flex flex-col justify-center overflow-hidden">
       {/* Background gradients */}
@@ -49,11 +50,12 @@ const Hero: React.FC<HeroProps> = ({ onContactClick }) => {
                 <span>Let's Talk</span>
                 <ArrowRight size={20} />
               </button>
-              <button 
+              <button
+                onClick={onViewCV}
                 className="flex items-center justify-center space-x-2 border border-slate-700 hover:border-white text-slate-300 hover:text-white px-8 py-4 rounded-full font-medium transition-all hover:bg-slate-800"
               >
-                <span>Download CV</span>
-                <Download size={20} />
+                <span>View CV</span>
+                <FileText size={20} />
               </button>
             </div>
           </div>
