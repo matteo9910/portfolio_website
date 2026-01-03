@@ -75,11 +75,11 @@ const Hero: React.FC<HeroProps> = ({ onContactClick, onViewCV }) => {
                 </div>
                 
                 {/* Main Image */}
-                <div className="w-full h-full rounded-tr-[100px] rounded-bl-[100px] overflow-hidden grayscale hover:grayscale-0 transition-all duration-700 border-4 border-orange-500/20">
-                  <img 
-                    src="https://picsum.photos/600/800" 
-                    alt="Matteo Calza-Metre" 
-                    className="w-full h-full object-cover"
+                <div className="w-full h-full rounded-tr-[100px] rounded-bl-[100px] overflow-hidden transition-all duration-700 border-4 border-orange-500/30 hover:border-orange-500/50 shadow-2xl shadow-orange-900/20">
+                  <img
+                    src="/gemini_profile_img.png"
+                    alt="Matteo Calza-Metre - AI Engineer"
+                    className="w-full h-full object-cover object-center"
                   />
                 </div>
 
