@@ -25,15 +25,15 @@ export const MARQUEE_SKILLS = [
 export const EXPERIENCE_DATA: Experience[] = [
   {
     id: "1",
-    role: "AI Engineer & Developer",
+    role: "AI Engineer",
     company: "EY",
     location: "Italy",
-    duration: "Present",
+    duration: "Jun 2025 – Present",
     description: [
-      "Strategic consulting for AI integration in enterprise processes.",
-      "Development of intelligent automation solutions (Demand Forecasting, Predictive Maintenance).",
-      "Design and implementation of RAG agents for technical-financial document support.",
-      "Development of autonomous AI agents for decisioning using n8n, Power Automate, and custom Python."
+      "Developed a RAG agent to support auditors in analyzing contracts according to IFRS 15 standards using GPT-4o and ChromaDB.",
+      "Created a PoC for retail demand forecasting using XGBoost to predict revenue for 1,115 stores.",
+      "Built an automated AI Market Intelligence Agent using n8n, Claude Sonnet 4.5, and GPT-5 for SME reporting.",
+      "Developed a resource optimization desktop app with SLSQP algorithm for engagement management."
     ]
   },
   {
@@ -41,12 +41,12 @@ export const EXPERIENCE_DATA: Experience[] = [
     role: "Data Analyst",
     company: "EssilorLuxottica",
     location: "Italy",
-    duration: "2 Years",
+    duration: "Sep 2023 – Jun 2025",
     description: [
-      "Designed and created Enterprise Business Intelligence systems via Power BI.",
-      "Managed on-premise SQL Server and MariaDB databases.",
-      "Developed semantic models for dynamic reporting.",
-      "Performed advanced EDA using SQL, DAX, and Python."
+      "Developed Power BI dashboard for scrap monitoring, achieving 2% reduction and €500,000 annual savings.",
+      "Created quality control dashboard, reducing production-budget deviation by 3%.",
+      "Performed SQL analysis on 500,000+ records, enabling 5% operational efficiency increase.",
+      "Automated KPI extraction and calculation processes."
     ]
   }
 ];

@@ -42,7 +42,7 @@ const App: React.FC = () => {
       <main>
         <Hero onContactClick={handleContactClick} onViewCV={handleViewCV} />
         <Skills />
-        <Experience />
+        <Experience onViewCV={handleViewCV} />
         <Projects onProjectClick={setSelectedProject} />
         <Contact />
       </main>
