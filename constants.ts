@@ -1,9 +1,9 @@
 import { Experience, Project, Skill } from './types';
 
 export const SOCIAL_LINKS = {
-  linkedin: "https://linkedin.com",
-  github: "https://github.com",
-  email: "mailto:matteo@example.com"
+  linkedin: "https://www.linkedin.com/in/matteo-calza-metre-681ba5253/",
+  github: "https://github.com/matteo9910",
+  email: "mailto:matteocalzametreworkco@gmail.com"
 };
 
 export const HERO_DATA = {
@@ -95,7 +95,38 @@ export const PROJECTS_DATA: Project[] = [
 ];
 
 export const SKILLS_DATA = [
-  { title: "AI & ML", skills: ["LLM Applications", "RAG Architecture", "TensorFlow/Keras", "Scikit-learn", "Prompt Engineering"] },
-  { title: "Data Engineering", skills: ["SQL (Advanced)", "Power BI/Fabric", "DAX", "Data Modeling", "ETL Pipelines"] },
-  { title: "Development", skills: ["Python", "Automation (n8n)", "Git", "Rest APIs", "Agile Methodology"] }
+  {
+    title: "AI & ML",
+    skills: [
+      "LLM Applications",
+      "RAG Architecture",
+      "TensorFlow/Keras",
+      "Scikit-learn",
+      "Prompt Engineering",
+      "LangChain",
+      "ChromaDB"
+    ]
+  },
+  {
+    title: "Data Analytics",
+    skills: [
+      "SQL (Advanced)",
+      "Power BI/Fabric",
+      "DAX",
+      "Data Modeling",
+      "ETL Pipelines",
+      "MS Excel"
+    ]
+  },
+  {
+    title: "Development",
+    skills: [
+      "Python",
+      "Automation (n8n)",
+      "Git",
+      "Docker",
+      "OpenAI API",
+      "Anthropic API"
+    ]
+  }
 ];

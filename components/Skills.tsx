@@ -57,9 +57,6 @@ const Skills: React.FC = () => {
                   </li>
                 ))}
               </ul>
-              <div className="mt-8 pt-6 border-t border-slate-800 flex items-center text-sm font-bold text-orange-500 cursor-pointer hover:underline">
-                EXPLORE STACK <span className="ml-2">→</span>
-              </div>
             </div>
           ))}
         </div>
