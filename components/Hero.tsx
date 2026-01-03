@@ -79,7 +79,7 @@ const Hero: React.FC<HeroProps> = ({ onContactClick, onViewCV }) => {
                   <img
                     src="/gemini_profile_img.png"
                     alt="Matteo Calza-Metre - AI Engineer"
-                    className="w-full h-full object-cover object-center"
+                    className="w-full h-full object-cover object-[center_20%]"
                   />
                 </div>
 
