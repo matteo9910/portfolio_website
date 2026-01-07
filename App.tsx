@@ -8,12 +8,14 @@ import Contact from './components/Contact';
 import ProjectDetail from './components/ProjectDetail';
 import CV from './components/CV';
 import StressDetectionProject from './components/StressDetectionProject';
+import InterpretableCreditRiskProject from './components/InterpretableCreditRiskProject';
 import { Project } from './types';
 
 const App: React.FC = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [showCV, setShowCV] = useState<boolean>(false);
   const [showStressDetection, setShowStressDetection] = useState<boolean>(false);
+  const [showCreditRisk, setShowCreditRisk] = useState<boolean>(false);
 
   const handleContactClick = () => {
     const contactSection = document.getElementById('contact');
@@ -42,6 +44,16 @@ const App: React.FC = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const handleViewCreditRisk = () => {
+    setShowCreditRisk(true);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleBackFromCreditRisk = () => {
+    setShowCreditRisk(false);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   // If CV page is shown, render only CV component
   if (showCV) {
     return <CV onBack={handleBackFromCV} />;
@@ -52,6 +64,11 @@ const App: React.FC = () => {
     return <StressDetectionProject onBack={handleBackFromStressDetection} />;
   }
 
+  // If Credit Risk page is shown, render only InterpretableCreditRiskProject component
+  if (showCreditRisk) {
+    return <InterpretableCreditRiskProject onBack={handleBackFromCreditRisk} />;
+  }
+
   return (
     <div className="min-h-screen bg-slate-950 text-white font-sans selection:bg-orange-500 selection:text-white">
       <Navbar onContactClick={handleContactClick} />
@@ -60,7 +77,11 @@ const App: React.FC = () => {
         <Hero onContactClick={handleContactClick} onViewCV={handleViewCV} />
         <Skills />
         <Experience onViewCV={handleViewCV} />
-        <Projects onProjectClick={setSelectedProject} onStressDetectionClick={handleViewStressDetection} />
+        <Projects
+          onProjectClick={setSelectedProject}
+          onStressDetectionClick={handleViewStressDetection}
+          onCreditRiskClick={handleViewCreditRisk}
+        />
         <Contact />
       </main>
 

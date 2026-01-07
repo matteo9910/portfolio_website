@@ -54,6 +54,16 @@ export const EXPERIENCE_DATA: Experience[] = [
 export const PROJECTS_DATA: Project[] = [
   {
     id: "p1",
+    title: "Interpretable Credit Risk ML",
+    category: "Machine Learning / Finance",
+    image: "https://picsum.photos/800/600?random=5",
+    techStack: ["Python", "Scikit-learn", "Logistic Regression", "Decision Trees"],
+    description: "Credit scoring model predicting customer creditworthiness with interpretable ML for transparent decisions.",
+    fullContent: "Developed interpretable machine learning models (Logistic Regression, Decision Trees, Random Forest, K-NN) to predict credit card approval. Focused on model interpretability to explain credit decisions, identifying key features like income, age, and employment status. Achieved balanced performance while maintaining transparency for regulatory compliance.",
+    githubUrl: "https://github.com/matteo9910/interpretable-credit-risk-ml"
+  },
+  {
+    id: "p2",
     title: "Anti-Hater Filter",
     category: "Deep Learning / NLP",
     image: "https://picsum.photos/800/600?random=1",
@@ -63,7 +73,7 @@ export const PROJECTS_DATA: Project[] = [
     githubUrl: "#"
   },
   {
-    id: "p2",
+    id: "p3",
     title: "Wearable Stress Detection",
     category: "Machine Learning / Healthcare",
     image: "https://picsum.photos/800/600?random=2",
@@ -73,7 +83,7 @@ export const PROJECTS_DATA: Project[] = [
     githubUrl: "#"
   },
   {
-    id: "p3",
+    id: "p4",
     title: "Rossmann Store Sales",
     category: "Predictive Analytics",
     image: "https://picsum.photos/800/600?random=3",
@@ -83,7 +93,7 @@ export const PROJECTS_DATA: Project[] = [
     githubUrl: "#"
   },
   {
-    id: "p4",
+    id: "p5",
     title: "Insurance Cross-Selling",
     category: "Classification ML",
     image: "https://picsum.photos/800/600?random=4",

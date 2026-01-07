@@ -6,14 +6,20 @@ import { Project } from '../types';
 interface ProjectsProps {
   onProjectClick: (project: Project) => void;
   onStressDetectionClick?: () => void;
+  onCreditRiskClick?: () => void;
 }
 
-const Projects: React.FC<ProjectsProps> = ({ onProjectClick, onStressDetectionClick }) => {
+const Projects: React.FC<ProjectsProps> = ({ onProjectClick, onStressDetectionClick, onCreditRiskClick }) => {
   const handleProjectClick = (project: Project) => {
-    // If it's the Wearable Stress Detection project (p2), open dedicated page
-    if (project.id === 'p2' && onStressDetectionClick) {
+    // If it's the Wearable Stress Detection project (p3), open dedicated page
+    if (project.id === 'p3' && onStressDetectionClick) {
       onStressDetectionClick();
-    } else {
+    }
+    // If it's the Interpretable Credit Risk project (p1), open dedicated page
+    else if (project.id === 'p1' && onCreditRiskClick) {
+      onCreditRiskClick();
+    }
+    else {
       // Otherwise, open the generic modal
       onProjectClick(project);
     }
