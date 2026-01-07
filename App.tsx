@@ -7,11 +7,13 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import ProjectDetail from './components/ProjectDetail';
 import CV from './components/CV';
+import StressDetectionProject from './components/StressDetectionProject';
 import { Project } from './types';
 
 const App: React.FC = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [showCV, setShowCV] = useState<boolean>(false);
+  const [showStressDetection, setShowStressDetection] = useState<boolean>(false);
 
   const handleContactClick = () => {
     const contactSection = document.getElementById('contact');
@@ -30,9 +32,24 @@ const App: React.FC = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const handleViewStressDetection = () => {
+    setShowStressDetection(true);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleBackFromStressDetection = () => {
+    setShowStressDetection(false);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   // If CV page is shown, render only CV component
   if (showCV) {
     return <CV onBack={handleBackFromCV} />;
+  }
+
+  // If Stress Detection page is shown, render only StressDetectionProject component
+  if (showStressDetection) {
+    return <StressDetectionProject onBack={handleBackFromStressDetection} />;
   }
 
   return (
