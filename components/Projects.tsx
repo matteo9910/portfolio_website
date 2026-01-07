@@ -5,9 +5,19 @@ import { Project } from '../types';
 
 interface ProjectsProps {
   onProjectClick: (project: Project) => void;
+  onStressDetectionClick?: () => void;
 }
 
-const Projects: React.FC<ProjectsProps> = ({ onProjectClick }) => {
+const Projects: React.FC<ProjectsProps> = ({ onProjectClick, onStressDetectionClick }) => {
+  const handleProjectClick = (project: Project) => {
+    // If it's the Wearable Stress Detection project (p2), open dedicated page
+    if (project.id === 'p2' && onStressDetectionClick) {
+      onStressDetectionClick();
+    } else {
+      // Otherwise, open the generic modal
+      onProjectClick(project);
+    }
+  };
   return (
     <section id="projects" className="py-24 bg-slate-950 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -73,8 +83,8 @@ const Projects: React.FC<ProjectsProps> = ({ onProjectClick }) => {
                 </div>
 
                 <div className="flex gap-6">
-                  <button 
-                    onClick={() => onProjectClick(project)}
+                  <button
+                    onClick={() => handleProjectClick(project)}
                     className="flex items-center gap-2 text-white font-bold text-lg border-b-2 border-orange-500 pb-1 hover:text-orange-500 transition-colors"
                   >
                     See Details <ArrowUpRight size={20} />

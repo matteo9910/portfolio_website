@@ -60,7 +60,7 @@ const App: React.FC = () => {
         <Hero onContactClick={handleContactClick} onViewCV={handleViewCV} />
         <Skills />
         <Experience onViewCV={handleViewCV} />
-        <Projects onProjectClick={setSelectedProject} />
+        <Projects onProjectClick={setSelectedProject} onStressDetectionClick={handleViewStressDetection} />
         <Contact />
       </main>
 
